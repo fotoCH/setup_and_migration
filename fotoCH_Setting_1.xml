@@ -354,6 +354,24 @@
     </list>
   </lists>
   <elementSets>
+    <metadataElement code="old_id" datatype="Integer">
+      <labels>
+        <label locale="de_CH">
+          <name>Alte Id</name>
+        </label>
+      </labels>
+      <typeRestrictions>
+        <restriction>
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+			<setting name="doesNotTakeLocale">1</setting>
+          </settings>
+        </restriction>
+	  </typeRestrictions>
+    </metadataElement>
     <metadataElement code="description" datatype="Text">
       <labels>
         <label locale="en_US">
@@ -370,6 +388,7 @@
         <setting name="fieldHeight">6</setting>
         <setting name="minChars">0</setting>
         <setting name="maxChars">65535</setting>
+		<setting name="usewysiwygeditor">1</setting>
       </settings>
       <typeRestrictions>
         <restriction code="desc_objects">
