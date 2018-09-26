@@ -15,6 +15,9 @@
         <label locale="en_US">
           <name>Object types</name>
         </label>
+		<label locale="de_CH">
+          <name>Objekttypen</name>
+        </label>
       </labels>
       <items>
         <item idno="photograph" enabled="1" default="1">
@@ -97,6 +100,9 @@
       <labels>
         <label locale="en_US">
           <name>Collection types</name>
+        </label>
+		<label locale="en_US">
+          <name>Sammlungs-Typen</name>
         </label>
       </labels>
       <items>
@@ -952,6 +958,38 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
+	<metadataElement code="df_projectname" datatype="Text">
+      <labels>
+        <label locale="de_CH">
+          <name>Projektname</name>
+          <description>Projektname</description>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">40</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">65535</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction>
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+		<restriction>
+          <table>ca_entities</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
     <metadataElement code="genre_list" datatype="List" list="genre_types">
       <labels>
         <label locale="en_US">
@@ -1004,8 +1042,11 @@
             <placement code="preferred_labels">
               <bundle>preferred_labels</bundle>
               <settings>
-                <setting name="label" locale="en_US">Name</setting>
+                <setting name="label" locale="de_CH">Name</setting>
               </settings>
+            </placement>
+			<placement code="nonpreferred_labels">
+              <bundle>nonpreferred_labels</bundle>
             </placement>
             <placement code="ca_attribute_biography">
               <bundle>ca_attribute_biography</bundle>
@@ -1019,9 +1060,24 @@
             <placement code="ca_attribute_date">
               <bundle>ca_attribute_date</bundle>
             </placement>
-            <!--<placement code="ca_attribute_date_to">
-                <bundle>ca_attribute_date_to</bundle>
-                </placement>-->
+			<placement code="ca_attribute_address">
+              <bundle>ca_attribute_address</bundle>
+            </placement>
+            <placement code="ca_attribute_telephone">
+              <bundle>ca_attribute_telephone</bundle>
+            </placement>
+            <placement code="ca_attribute_email">
+              <bundle>ca_attribute_email</bundle>
+            </placement>
+			<placement code="ca_attribute_external_link">
+              <bundle>ca_attribute_external_link</bundle>
+              <settings>
+                <setting name="add_label" locale="de_CH">Externer Link hinzufügen</setting>
+              </settings>
+            </placement>
+			<placement code="ca_list_items">
+              <bundle>ca_list_items</bundle>
+            </placement>
             <placement code="access">
               <bundle>access</bundle>
             </placement>
@@ -1051,72 +1107,18 @@
             </placement>
           </bundlePlacements>
         </screen>
-        <screen idno="contact" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Contact info</name>
-            </label>
-            <label locale="de_CH">
-              <name>Kontaktdaten</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_attribute_address">
-              <bundle>ca_attribute_address</bundle>
-            </placement>
-            <placement code="ca_attribute_telephone">
-              <bundle>ca_attribute_telephone</bundle>
-            </placement>
-            <placement code="ca_attribute_email">
-              <bundle>ca_attribute_email</bundle>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="altnames" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Alternate names</name>
-            </label>
-            <label locale="de_CH">
-              <name>Alternative Namen</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="nonpreferred_labels">
-              <bundle>nonpreferred_labels</bundle>
-              <settings>
-                <setting name="label" locale="en_US">Alternate names</setting>
-              </settings>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="links" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Links</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_attribute_external_link">
-              <bundle>ca_attribute_external_link</bundle>
-              <settings>
-                <setting name="add_label" locale="en_US">Add external link</setting>
-              </settings>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="keywords" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Keywords</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_list_items">
-              <bundle>ca_list_items</bundle>
-            </placement>
-          </bundlePlacements>
-        </screen>
+		<screen idno="dokufiche" default="0">
+		  <labels>
+			<label locale="de_CH">
+			  <name>Dokumentationsfiche</name>
+			</label>
+			</labels>
+		  <bundlePlacements>
+		    <placement code="df_projectname">
+			  <bundle>df_projectname</bundle>
+		    </placement>
+		  </bundlePlacements>
+		</screen>
       </screens>
     </userInterface>
     <userInterface code="object_cataloguers_ui" type="ca_objects">
@@ -1142,12 +1144,9 @@
             <placement code="preferred_labels">
               <bundle>preferred_labels</bundle>
               <settings>
-                <setting name="label" locale="en_US">Title</setting>
+                <setting name="label" locale="de_CH">Titel</setting>
               </settings>
             </placement>
-            <!--<placement code="subtitle">
-                <bundle>ca_attribute_subtitle</bundle>
-                </placement>-->
             <!--<placement code="status">
                 <bundle>status</bundle>
                 </placement>-->
@@ -1160,27 +1159,21 @@
             <placement code="ca_object_representations">
               <bundle>ca_object_representations</bundle>
             </placement>
+			<placement code="ca_attribute_date">
+              <bundle>ca_attribute_date</bundle>
+            </placement>
+			<placement code="ca_list_items">
+              <bundle>ca_list_items</bundle>
+              <settings>
+                <setting name="add_label" locale="en_US">Add term</setting>
+              </settings>
+            </placement>
+			<placement code="ca_attribute_external_link">
+              <bundle>ca_attribute_external_link</bundle>
+            </placement>
             <placement code="access">
               <bundle>access</bundle>
             </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="dates" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Dates</name>
-            </label>
-            <label locale="de_CH">
-              <name>Datum</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_attribute_date">
-              <bundle>ca_attribute_date</bundle>
-            </placement>
-            <!--<placement code="ca_attribute_date_to">
-                <bundle>ca_attribute_date_to</bundle>
-                </placement>-->
           </bundlePlacements>
         </screen>
         <screen idno="relationships" default="0">
@@ -1222,33 +1215,18 @@
             </placement>
           </bundlePlacements>
         </screen>
-        <screen idno="links" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Links</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_attribute_external_link">
-              <bundle>ca_attribute_external_link</bundle>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="keywords" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Keywords</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_list_items">
-              <bundle>ca_list_items</bundle>
-              <settings>
-                <setting name="add_label" locale="en_US">Add term</setting>
-              </settings>
-            </placement>
-          </bundlePlacements>
-        </screen>
+		<screen idno="dokufiche" default="0">
+		  <labels>
+			<label locale="de_CH">
+			  <name>Dokumentationsfiche</name>
+			</label>
+		  </labels>
+		  <bundlePlacements>
+			<placement code="df_projectname">
+			  <bundle>df_projectname</bundle>
+			</placement>
+		  </bundlePlacements>
+		</screen>
       </screens>
     </userInterface>
     <userInterface code="collection_cataloguers_ui" type="ca_collections">
@@ -1283,6 +1261,15 @@
             <placement code="ca_attribute_genre_list">
               <bundle>ca_attribute_genre_list</bundle>
             </placement>
+			<placement code="ca_list_items">
+              <bundle>ca_list_items</bundle>
+              <settings>
+                <setting name="add_label" locale="en_US">Add term</setting>
+              </settings>
+            </placement>
+			<placement code="ca_attribute_external_link">
+              <bundle>ca_attribute_external_link</bundle>
+            </placement>
             <placement code="access">
               <bundle>access</bundle>
             </placement>
@@ -1309,33 +1296,6 @@
             </placement>
             <placement code="ca_collections">
               <bundle>ca_collections</bundle>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="links" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Links</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_attribute_external_link">
-              <bundle>ca_attribute_external_link</bundle>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="keywords" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Keywords</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_list_items">
-              <bundle>ca_list_items</bundle>
-              <settings>
-                <setting name="add_label" locale="en_US">Add term</setting>
-              </settings>
             </placement>
           </bundlePlacements>
         </screen>
@@ -1376,23 +1336,20 @@
             <placement code="ca_attribute_internal_notes">
               <bundle>ca_attribute_internal_notes</bundle>
             </placement>
+			<placement code="ca_attribute_date">
+              <bundle>ca_attribute_date</bundle>
+            </placement>
+			<placement code="ca_list_items">
+              <bundle>ca_list_items</bundle>
+            </placement>
+			<placement code="ca_attribute_external_link">
+              <bundle>ca_attribute_external_link</bundle>
+              <settings>
+                <setting name="add_label" locale="en_US">Add external link</setting>
+              </settings>
+            </placement>
             <placement code="access">
               <bundle>access</bundle>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="dates" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Dates</name>
-            </label>
-            <label locale="de_CH">
-              <name>Daten</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_attribute_date">
-              <bundle>ca_attribute_date</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -1419,33 +1376,6 @@
               <bundle>ca_occurrences</bundle>
               <settings>
                 <setting name="label" locale="en_US">Related subject programs</setting>
-              </settings>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="keywords" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Keywords</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_list_items">
-              <bundle>ca_list_items</bundle>
-            </placement>
-          </bundlePlacements>
-        </screen>
-        <screen idno="links" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Links</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_attribute_external_link">
-              <bundle>ca_attribute_external_link</bundle>
-              <settings>
-                <setting name="add_label" locale="en_US">Add external link</setting>
               </settings>
             </placement>
           </bundlePlacements>
