@@ -316,42 +316,48 @@
         </label>
       </labels>
       <items>
-        <item idno="persons" enabled="1" default="0" value="0">
-          <labels>
-            <label locale="de_CH" preferred="1">
-              <name_singular>Person</name_singular>
-              <name_plural>Personen</name_plural>
-            </label>
-            <label locale="en_US" preferred="1">
-              <name_singular>Person</name_singular>
-              <name_plural>Persons</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="news" enabled="1" default="0" value="2">
-          <labels>
-            <label locale="en_US" preferred="1">
-              <name_singular>News</name_singular>
-              <name_plural>News</name_plural>
-            </label>
-            <label locale="de_CH" preferred="1">
-              <name_singular>Presse</name_singular>
-              <name_plural>Presse</name_plural>
-            </label>
-          </labels>
-        </item>
-        <item idno="nature" enabled="1" default="1" value="1">
-          <labels>
-            <label locale="de_CH" preferred="1">
-              <name_singular>Natur</name_singular>
-              <name_plural>Natur</name_plural>
-            </label>
-            <label locale="en_US" preferred="1">
-              <name_singular>Nature</name_singular>
-              <name_plural>Nature</name_plural>
-            </label>
-          </labels>
-        </item>
+        <item idno="personen" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Personen</name_singular><name_plural>Personen</name_plural></label></labels></item>
+		<item idno="reportage" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Reportage</name_singular><name_plural>Reportage</name_plural></label></labels></item>
+		<item idno="presse" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Presse</name_singular><name_plural>Presse</name_plural></label></labels></item>
+		<item idno="portraet" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Portraet</name_singular><name_plural>Portraet</name_plural></label></labels></item>
+		<item idno="ortsbild" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Ortsbild</name_singular><name_plural>Ortsbild</name_plural></label></labels></item>
+		<item idno="architektur" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Architektur</name_singular><name_plural>Architektur</name_plural></label></labels></item>
+		<item idno="landschaft" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Landschaft</name_singular><name_plural>Landschaft</name_plural></label></labels></item>
+		<item idno="natur" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Natur</name_singular><name_plural>Natur</name_plural></label></labels></item>
+		<item idno="bergfotografie" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Bergfotografie</name_singular><name_plural>Bergfotografie</name_plural></label></labels></item>
+		<item idno="flugaufnahme" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Flugaufnahme</name_singular><name_plural>Flugaufnahme</name_plural></label></labels></item>
+		<item idno="gewerbe" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Gewerbe</name_singular><name_plural>Gewerbe</name_plural></label></labels></item>
+		<item idno="industrie" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Industrie</name_singular><name_plural>Industrie</name_plural></label></labels></item>
+		<item idno="tourismus" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Tourismus</name_singular><name_plural>Tourismus</name_plural></label></labels></item>
+		<item idno="landwirtschaft" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Landwirtschaft</name_singular><name_plural>Landwirtschaft</name_plural></label></labels></item>
+		<item idno="tiere" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Tiere</name_singular><name_plural>Tiere</name_plural></label></labels></item>
+		<item idno="sachaufnahme" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Sachaufnahme</name_singular><name_plural>Sachaufnahme</name_plural></label></labels></item>
+		<item idno="reproduktion" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Reproduktion</name_singular><name_plural>Reproduktion</name_plural></label></labels></item>
+		<item idno="werbung" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Werbung</name_singular><name_plural>Werbung</name_plural></label></labels></item>
+		<item idno="mode" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Mode</name_singular><name_plural>Mode</name_plural></label></labels></item>
+		<item idno="firmenportraet" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Firmenportraet</name_singular><name_plural>Firmenportraet</name_plural></label></labels></item>
+		<item idno="sport" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Sport</name_singular><name_plural>Sport</name_plural></label></labels></item>
+		<item idno="unfall" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Unfall / Katastrophe</name_singular><name_plural>Unfall / Katastrophe</name_plural></label></labels></item>
+		<item idno="verkehr" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Verkehr</name_singular><name_plural>Verkehr</name_plural></label></labels></item>
+		<item idno="militaer" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Militaer</name_singular><name_plural>Militaer</name_plural></label></labels></item>
+		<item idno="ethnologie" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Ethnologie</name_singular><name_plural>Ethnologie</name_plural></label></labels></item>
+		<item idno="archaeologie" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Archaeologie</name_singular><name_plural>Archaeologie</name_plural></label></labels></item>
+		<item idno="medizin" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Medizin</name_singular><name_plural>Medizin</name_plural></label></labels></item>
+		<item idno="kriminologie" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Kriminologie</name_singular><name_plural>Kriminologie</name_plural></label></labels></item>
+		<item idno="musik" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Musik</name_singular><name_plural>Musik</name_plural></label></labels></item>
+		<item idno="theater" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Theater</name_singular><name_plural>Theater</name_plural></label></labels></item>
+		<item idno="kunst" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Kunst</name_singular><name_plural>Kunst</name_plural></label></labels></item>
+		<item idno="literatur" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Literatur</name_singular><name_plural>Literatur</name_plural></label></labels></item>
+		<item idno="piktorialismus" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Piktorialismus</name_singular><name_plural>Piktorialismus</name_plural></label></labels></item>
+		<item idno="kunst_fotografie" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Kunst mit Fotografie</name_singular><name_plural>Kunst mit Fotografie</name_plural></label></labels></item>
+		<item idno="alltag" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Alltag</name_singular><name_plural>Alltag</name_plural></label></labels></item>
+		<item idno="akt" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Akt</name_singular><name_plural>Akt</name_plural></label></labels></item>
+		<item idno="film" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Film</name_singular><name_plural>Film</name_plural></label></labels></item>
+		<item idno="dokumentation" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Dokumentation</name_singular><name_plural>Dokumentation</name_plural></label></labels></item>
+		<item idno="multivision" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Multivision</name_singular><name_plural>Multivision</name_plural></label></labels></item>
+		<item idno="private" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>private Fotografie</name_singular><name_plural>private Fotografie</name_plural></label></labels></item>
+		<item idno="wissenschaft" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>wissenschaftliche Fotografie</name_singular><name_plural>wissenschaftliche Fotografie</name_plural></label></labels></item>
+		<item idno="reise" enabled="1" default="0" value="0"><labels><label locale="de_CH" preferred="1"><name_singular>Reise</name_singular><name_plural>Reise</name_plural></label></labels></item>
       </items>
     </list>
   </lists>
@@ -1164,6 +1170,7 @@
               <bundle>preferred_labels</bundle>
               <settings>
                 <setting name="label" locale="de_CH">Titel</setting>
+				<setting name="height">1</setting>
               </settings>
             </placement>
 			<placement code="idno">
@@ -1580,6 +1587,10 @@
               <typename>describes</typename>
               <typename_reverse>is described by</typename_reverse>
             </label>
+			<label locale="de_CH">
+              <typename>beschreibt</typename>
+              <typename_reverse>wird beschrieben durch</typename_reverse>
+            </label>
           </labels>
           <subTypeLeft> </subTypeLeft>
           <subTypeRight></subTypeRight>
@@ -1792,11 +1803,25 @@
     </relationshipTable>
     <relationshipTable name="ca_entities_x_collections">
       <types>
-        <type code="related" default="1">
+        <type code="related" default="0">
           <labels>
             <label locale="en_US">
               <typename>is related to</typename>
               <typename_reverse>is related to</typename_reverse>
+            </label>
+          </labels>
+          <subTypeLeft> </subTypeLeft>
+          <subTypeRight></subTypeRight>
+        </type>
+		<type code="holder" default="1">
+          <labels>
+            <label locale="en_US">
+              <typename>holds</typename>
+              <typename_reverse>is held by</typename_reverse>
+            </label>
+			<label locale="de_CH">
+              <typename>verwaltet</typename>
+              <typename_reverse>ist verwaltet von</typename_reverse>
             </label>
           </labels>
           <subTypeLeft> </subTypeLeft>
