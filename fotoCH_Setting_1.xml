@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- == TODO == -->
+<!-- * Attribute abgleichen mit aktuellem System -->
 <profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="profile.xsd" useForConfiguration="1" base="base">
   <profileName>FotoCH</profileName>
   <profileDescription>This is a minimal profile adapted to the needs of foto-ch.ch</profileDescription>
@@ -355,6 +357,7 @@
   </lists>
   <elementSets>
     <metadataElement code="old_id" datatype="Integer">
+	  <!-- Is needed for the fotos import (idno is already used for file name) -->
       <labels>
         <label locale="de_CH">
           <name>Alte Id</name>
@@ -1052,13 +1055,7 @@
             </label>
           </labels>
           <bundlePlacements>
-            <!--<placement code="idno">
-                <bundle>idno</bundle>
-                </placement>-->
-            <placement code="ca_attribute_alternate_idnos">
-              <bundle>ca_attribute_alternate_idnos</bundle>
-            </placement>
-            <placement code="preferred_labels">
+			<placement code="preferred_labels">
               <bundle>preferred_labels</bundle>
               <settings>
                 <setting name="label" locale="de_CH">Name</setting>
@@ -1066,6 +1063,12 @@
             </placement>
 			<placement code="nonpreferred_labels">
               <bundle>nonpreferred_labels</bundle>
+            </placement>
+			<placement code="idno">
+                <bundle>idno</bundle>
+            </placement>
+            <placement code="ca_attribute_alternate_idnos">
+              <bundle>ca_attribute_alternate_idnos</bundle>
             </placement>
             <placement code="ca_attribute_biography">
               <bundle>ca_attribute_biography</bundle>
@@ -1157,14 +1160,14 @@
             </label>
           </labels>
           <bundlePlacements>
-            <!--<placement code="idno">
-                <bundle>idno</bundle>
-                </placement>-->
             <placement code="preferred_labels">
               <bundle>preferred_labels</bundle>
               <settings>
                 <setting name="label" locale="de_CH">Titel</setting>
               </settings>
+            </placement>
+			<placement code="idno">
+                <bundle>idno</bundle>
             </placement>
             <!--<placement code="status">
                 <bundle>status</bundle>
@@ -1268,6 +1271,9 @@
             <placement code="preferred_labels">
               <bundle>preferred_labels</bundle>
             </placement>
+			<placement code="idno">
+                <bundle>idno</bundle>
+            </placement>
             <placement code="ca_attribute_date">
               <bundle>ca_attribute_date</bundle>
             </placement>
@@ -1340,9 +1346,9 @@
             <placement code="preferred_labels">
               <bundle>preferred_labels</bundle>
             </placement>
-            <!--<placement code="idno">
+			<placement code="idno">
                 <bundle>idno</bundle>
-                </placement>-->
+            </placement>
             <placement code="ca_attribute_exhibition_type">
               <bundle>ca_attribute_exhibition_type</bundle>
             </placement>
@@ -1924,8 +1930,12 @@
               <typename>has as author</typename>
               <typename_reverse>was author of</typename_reverse>
             </label>
+			<label locale="de_CH">
+              <typename>hatte als Author</typename>
+              <typename_reverse>war Author bei</typename_reverse>
+            </label>
           </labels>
-          <subTypeLeft>interview</subTypeLeft>
+          <subTypeLeft> </subTypeLeft>
           <subTypeRight/>
         </type>
         <type code="publisher" default="0">
@@ -1933,6 +1943,24 @@
             <label locale="en_US">
               <typename>had as publisher</typename>
               <typename_reverse>was publisher for</typename_reverse>
+            </label>
+			<label locale="de_CH">
+              <typename>hatte als Herausgeber</typename>
+              <typename_reverse>war Herausgeber bei</typename_reverse>
+            </label>
+          </labels>
+          <subTypeLeft> </subTypeLeft>
+          <subTypeRight/>
+        </type>
+		<type code="subject" default="0">
+          <labels>
+            <label locale="en_US">
+              <typename>involves</typename>
+              <typename_reverse>is subject at</typename_reverse>
+            </label>
+			<label locale="de_CH">
+              <typename>beinhaltet</typename>
+              <typename_reverse>ist Thema von</typename_reverse>
             </label>
           </labels>
           <subTypeLeft> </subTypeLeft>
