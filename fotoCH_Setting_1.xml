@@ -1040,6 +1040,15 @@
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
+		<restriction>
+          <table>ca_entities</table>
+          <type>photographer</type>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">255</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
       </typeRestrictions>
     </metadataElement>
   </elementSets>
@@ -1096,6 +1105,9 @@
             </placement>
             <placement code="ca_attribute_email">
               <bundle>ca_attribute_email</bundle>
+            </placement>
+			<placement code="ca_attribute_genre_list">
+              <bundle>ca_attribute_genre_list</bundle>
             </placement>
 			<placement code="ca_attribute_external_link">
               <bundle>ca_attribute_external_link</bundle>
