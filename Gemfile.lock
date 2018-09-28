@@ -1,0 +1,41 @@
+GIT
+  remote: git://github.com/stmichael/data-import.git
+  revision: ef93894ec548f237ef07a3d82298f5a6975643e5
+  specs:
+    data-import (0.0.1)
+      activesupport (>= 3.1.1)
+      i18n
+      progressbar
+      sequel
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (5.2.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    concurrent-ruby (1.0.5)
+    i18n (1.1.0)
+      concurrent-ruby (~> 1.0)
+    minitest (5.11.3)
+    mysql2 (0.5.2)
+    progressbar (1.10.0)
+    rake (12.3.1)
+    sequel (4.49.0)
+    thread_safe (0.3.6)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  data-import!
+  mysql2
+  rake
+  sequel (>= 4.13.0, < 5.0)
+
+BUNDLED WITH
+   1.14.6
