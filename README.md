@@ -6,8 +6,8 @@ Siehe auch Excel_Mapping/Genre_List_To_XML.xlsx
 
  * LOWER() über alles
  * Suchen & ersetzen:
-   * Umlaute durch ae, oe, ue
-   * "Unfall / Katastrophe" --> "unfall"
+   * Umlaute "ä" durch "ae"
+   * "Unfall/Katastrophe" --> "unfall"
    * "Kunst mit Fotografie" --> "kunst_fotografie"
    * "wissenschaftliche Fotografie" --> "wissenschaft"
    * "private Fotografie" --> "private"
