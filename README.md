@@ -1,7 +1,7 @@
 # Migration Guide
 
 ## Bildgattungen
-Die Spalte "bildgattungen" bei den Beständen und Fotografen muss vor dem Import in der Tabelle überarbeitet werden (nur die Spalte, nicht die ganze Tabelle!):
+Die Spalte "bildgattungen" bei den Beständen, Fotografen und Institutionen muss vor dem Import in der Tabelle überarbeitet werden (nur die Spalte, nicht die ganze Tabelle!):
 Siehe auch Excel_Mapping/Genre_List_To_XML.xlsx
 
  * LOWER() über alles
@@ -15,5 +15,12 @@ Siehe auch Excel_Mapping/Genre_List_To_XML.xlsx
 Danach werden die labels direkt auf die idno der List-Items in CollectiveAccess gematched.
 
 
+## Profile Import / Export
+Die Datei fotoCH_Setting_1.xml definiert die Datenstruktur und wird bei der Installation als Profil ausgewählt.
 
+Vor der Installation wird jeweils die aktuellste Version des Profiles auf den Server kopiert (scp / pscp). Benutzer und Passwort sind im KeePass zu finden:
+`$ scp .\fotoCH_Setting_1.xml [user]@46.231.207.26:/var/www/foto-ch.ch/collective_access/providence/install/profiles/xml`
 
+Manchmal ist es hilfreich, den aktellen Stand der Installation zu exportieren und einzelne Änderungen in die Profildatei aufzunehmen. Providence bietet dafür die "caUtils" an:
+`$ cd /var/www/foto-ch.ch/collective_access/providence/support`
+`$ ./bin/caUtils export-profile > ./../../export.xml`
