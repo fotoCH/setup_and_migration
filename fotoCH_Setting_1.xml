@@ -132,11 +132,15 @@
         </label>
       </labels>
       <items>
-        <item idno="manual" enabled="1" default="1">
+        <item idno="all" enabled="1" default="1">
           <labels>
             <label locale="en_US" preferred="1">
-              <name_singular>Manual</name_singular>
-              <name_plural>Manual</name_plural>
+              <name_singular>All sources</name_singular>
+              <name_plural>All sources</name_plural>
+            </label>
+			<label locale="de_CH" preferred="1">
+              <name_singular>Alle Quellen</name_singular>
+              <name_plural>Alle Quellen</name_plural>
             </label>
           </labels>
         </item>
@@ -152,11 +156,15 @@
         </label>
       </labels>
       <items>
-        <item idno="manual" enabled="1" default="1">
+        <item idno="root" enabled="1" default="1">
           <labels>
             <label locale="en_US" preferred="1">
-              <name_singular>Manual</name_singular>
-              <name_plural>Manual</name_plural>
+              <name_singular>Root</name_singular>
+              <name_plural>Root</name_plural>
+            </label>
+			<label locale="de_CH" preferred="1">
+              <name_singular>Stammverzeichnis</name_singular>
+              <name_plural>Stammverzeichnis</name_plural>
             </label>
           </labels>
         </item>
@@ -172,7 +180,7 @@
         </label>
       </labels>
       <items>
-        <item idno="country" enabled="1" default="1">
+        <item idno="country" enabled="1" default="0">
           <labels>
             <label locale="en_US" preferred="0">
               <name_singular>country</name_singular>
@@ -196,7 +204,7 @@
             </label>
           </labels>
         </item>
-        <item idno="city" enabled="1" default="0">
+        <item idno="city" enabled="1" default="1">
           <labels>
             <label locale="en_US" preferred="0">
               <name_singular>city</name_singular>
@@ -1678,12 +1686,13 @@
               <bundle>preferred_labels</bundle>
               <settings>
                 <setting name="label" locale="en_US">Place Name</setting>
+				<setting name="height">1</setting>
               </settings>
             </placement>
-            <placement code="ca_attribute_house">
-              <bundle>ca_attribute_house</bundle>
+			<placement code="ca_attribute_georeference">
+              <bundle>ca_attribute_georeference</bundle>
             </placement>
-            <placement code="ca_attribute_place_period">
+            <!--<placement code="ca_attribute_place_period">
               <bundle>ca_attribute_place_period</bundle>
             </placement>
             <placement code="ca_attribute_location">
@@ -1695,7 +1704,7 @@
                 <setting name="label" locale="en_US">Owner</setting>
                 <setting name="restrict_to_relationship_types">owner</setting>
               </settings>
-            </placement>
+            </placement>-->
             <placement code="access">
               <bundle>access</bundle>
               <settings>
