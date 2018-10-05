@@ -42,3 +42,8 @@ SELECT name_de FROM regiort
 WHERE typ = "ort"
 ```
 Das Resultat kann in die Tabelle Excel_Mapping\Data\Orte_withIdnoFormula.ods kopiert und so die idno's generiert werden.
+
+## Migrations-Reihenfolge
+* Orte vor Ausstellungen und Bestand_Orte
+* Fotografen vor Fotos
+* ...
