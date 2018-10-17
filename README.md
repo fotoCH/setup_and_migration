@@ -29,17 +29,32 @@ $ cd /var/www/foto-ch.ch/collective_access/providence/support
 $ ./bin/caUtils export-profile > ./../../export.xml
 ```
 
+### Import von Änderungen
+
+Wie in diesem [Artikel](https://docs.collectiveaccess.org/wiki/Configuration_Sync) fast richtig beschrieben, kann die Konfiguration eines
+laufenden Systems angepasst werden. Man muss also nicht neu installieren. Das ist nützlich, wenn man z.B. eine lange Liste importiern will (Beispiel Bildgattungen).
+
+```bash
+support/bin/caUtils update-installation-profile -n <name_of_your_profile>
+```
+
+wobei <name_of_your_profile> der Dateiname ohne `.xml` ist.
+
+#### Validerung des Profils gegen Schema (falls import nicht funktioniert)
+Falls es beim Import Validierungsfehler gibt, kann mit dem `profile.xsd` das XML validiert werden. Am besten Online. Der Importer gibt auch eine Fehlermeldung, aber keine Zeilenangabe.
+
 ## Places Export
 Export aller Ortschaften aus der Datenbank für den Import in CollectiveAccess:
 ``` sql
-SELECT ort FROM ausstellung
+SELECT ort COLLATE utf8_general_ci as ort FROM ausstellung
 UNION
-SELECT name FROM arbeitsorte
+SELECT name COLLATE utf8_general_ci FROM arbeitsorte
 UNION
-SELECT dcterms_spatial FROM fotos
+SELECT dcterms_spatial COLLATE utf8_general_ci FROM fotos
 UNION
-SELECT name_de FROM regiort
+SELECT name_de COLLATE utf8_general_ci FROM regiort
 WHERE typ = "ort"
+order by ort asc
 ```
 Das Resultat kann in die Tabelle Excel_Mapping\Data\Orte_withIdnoFormula.ods kopiert und so die idno's generiert werden.
 
@@ -47,3 +62,12 @@ Das Resultat kann in die Tabelle Excel_Mapping\Data\Orte_withIdnoFormula.ods kop
 * Orte vor Ausstellungen und Bestand_Orte
 * Fotografen vor Fotos
 * ...
+
+## Pawtucket Konfiguration
+
+Alle Anpassungen an Pawtucket sind im Repository [fotoCH/pawtucket2](https://github.com/fotoCH/pawtucket2) auf GitHub zu finden. Änderungen können auf dem Server `foto-ch.ch` mit `git pull --rebase origin master`
+von GitHub heruntergeladen werden.
+
+## Providence Konfiguration
+
+Für Providence gibt es ebenfalls ein Repository [fotoCH/providence](https://github.com/fotoCH/providence)
