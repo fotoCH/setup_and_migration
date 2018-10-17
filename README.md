@@ -38,7 +38,7 @@ laufenden Systems angepasst werden. Man muss also nicht neu installieren. Das is
 support/bin/caUtils update-installation-profile -n <name_of_your_profile>
 ```
 
-wobei <name_of_your_profile> der Dateiname ohne `.xml` ist.
+wobei `<name_of_your_profile>` der Dateiname ohne `.xml` ist.
 
 #### Validerung des Profils gegen Schema (falls import nicht funktioniert)
 Falls es beim Import Validierungsfehler gibt, kann mit dem `profile.xsd` das XML validiert werden. Am besten Online. Der Importer gibt auch eine Fehlermeldung, aber keine Zeilenangabe.
