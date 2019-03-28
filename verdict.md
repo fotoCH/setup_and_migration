@@ -8,10 +8,13 @@ Verdict zum Collective Access Pilot 2
 - Date Ranges in einem Feld
 - Generische Komponenten
 - Konfigurationsfiles für Konstanten
+- Elastic Search
+- Geschwindigkeit (?)
 
 ## Welche Nachteile hat CA?
 - Spaghetticode
 - Nicht gut wartbar
+- Lifecycle
 - Frontend: Mehrsprachigkeit nicht standardmässig integriert
 - Dokumentation häufig nicht vorhanden
 - Usability
