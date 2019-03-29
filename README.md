@@ -1,5 +1,7 @@
 # Migration Guide
 
+Dieses dokument enthält Anleitungen rund um den Pilotversuch mit CollectiveAccess. Warum wir von dem Archivsystem abgewichen sind, steht im [Verdict](./verdict.md)
+
 ## Bildgattungen
 Die Spalte "bildgattungen" bei den Beständen, Fotografen und Institutionen muss vor dem Import in der Tabelle überarbeitet werden (nur die Spalte, nicht die ganze Tabelle!):
 Siehe auch Excel_Mapping/Genre_List_To_XML.xlsx
